@@ -1,5 +1,6 @@
 package Dados;
 
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
 public class Livro {
@@ -50,11 +51,11 @@ public class Livro {
 	}
 	public String toString()
 	{
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		return "Id is "+this.id + "\n" +" Title is "+this.title +
 				" \n Author is "+this.author +" \n Date of Record "+
-				this.date_record;
-		
-				
+				sdf.format(this.date_record.getTime()) + "\n";
+					
 	}
 
 }
